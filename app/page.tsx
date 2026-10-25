@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const media = "/images/";
 const services = [
@@ -25,6 +25,13 @@ const projects = [
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const heroSlides = ["20240830_154433-2048x1536.jpg", "IMG-20240808-WA0019-1536x1152.jpg", "20240409_160012.jpg"];
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setActiveSlide((current) => (current + 1) % heroSlides.length), 4000);
+    return () => window.clearInterval(timer);
+  }, []);
   const [service, setService] = useState("Stickers");
   const [submitted, setSubmitted] = useState(false);
 
@@ -54,7 +61,7 @@ export default function HomePage() {
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-overlay" />
+          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => <img key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" />)}</div>\n          <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow">SIGNAGE · PRINTING · BRANDING</p>
             <h1>Brand Better<br /><em>with us.</em></h1>
@@ -62,7 +69,7 @@ export default function HomePage() {
             <p className="hero-copy">At RGR Graffix, we bring creativity to life with high-quality signage, printing, and branding solutions. From safety signs to custom apparel, we design with precision to make your brand stand out everywhere.</p>
             <a className="button button-light" href="#services">Explore Our Services <span>↗</span></a>
           </div>
-          <div className="hero-bottom"><span>Follow us</span><span className="socials"><a href="https://www.facebook.com/" aria-label="Facebook">f</a><a href="https://www.instagram.com/" aria-label="Instagram">◎</a><a href="https://www.tiktok.com/" aria-label="TikTok">♪</a></span><span className="hero-index">01 / 03</span></div>
+          <div className="hero-bottom"><span>Follow us</span><span className="socials"><a href="https://www.facebook.com/" aria-label="Facebook">f</a><a href="https://www.instagram.com/" aria-label="Instagram">◎</a><a href="https://www.tiktok.com/" aria-label="TikTok">♪</a></span><span className="hero-index">{String(activeSlide + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}</span></div>
         </section>
 
         <section className="trust section-wrap">
@@ -130,7 +137,7 @@ export default function HomePage() {
             <label>Full Name<input name="name" placeholder="Enter your full name" required /></label>
             <div className="form-row"><label>Email Address *<input name="email" type="email" placeholder="Enter your email" required /></label><label>Phone Number<input name="phone" type="tel" placeholder="Your phone number" /></label></div>
             <label>Address<input name="address" placeholder="Your address" /></label>
-            <label>Service Required<select value={service} onChange={(event) => setService(event.target.value)}>{["Stickers", ...services, "Graphic Design", "Other"].map((item) => <option key={item}>{item}</option>)}</select></label>
+            <label>Service Required<select value={service} onChange={(event) => setService(event.target.value)}>{["Stickers", ...services, "Other"].map((item) => <option key={item}>{item}</option>)}</select></label>
             <label>Additional Notes<textarea name="notes" rows={3} placeholder="Any special request?" /></label>
             <button className="button button-dark" type="submit">Send Enquiry <span>↗</span></button>
             {submitted && <p className="form-note">Thanks! This demo form is not connected to email yet. We’ll connect it before launch.</p>}
@@ -145,7 +152,7 @@ export default function HomePage() {
           <div><h4>HELP</h4><a href="#contact">Customer Support</a><a href="#services">How It Works</a><a href="#terms">Terms &amp; Conditions</a><a href="#privacy">Privacy Policy</a></div>
           <div><h4>WORK HOURS</h4><p>Monday – Friday<br />9 AM – 5 PM</p><p>Saturday<br />9 AM – 1 PM</p><a href="mailto:info@rgrgraffix.co.za">info@rgrgraffix.co.za</a><a href="tel:+27765352861">+27 76 535 2861</a></div>
         </div>
-        <div className="footer-bottom"><span>© 2025 RGR Graffix. All rights reserved.</span><span>Design by Digital Designa</span><span><a href="#terms">Terms of use</a> · <a href="#privacy">Privacy Policy</a> · <a href="#cookies">Cookie Policy</a></span></div>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} RGR Graffix. All rights reserved.</span><span><a href="#terms">Terms of use</a> · <a href="#privacy">Privacy Policy</a> · <a href="#cookies">Cookie Policy</a></span></div>
       </footer>
       <a className="chat-link" href="https://wa.me/27765352861">Need Help? Chat with us ↗</a>
     </>
