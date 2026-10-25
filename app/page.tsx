@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 const media = "/images/";
+const heroSlides = ["20240830_154433-2048x1536.jpg", "IMG-20240808-WA0019-1536x1152.jpg", "20240409_160012.jpg"];
 const services = [
   "Signage",
   "Vehicle Branding and Wrapping",
@@ -26,7 +27,6 @@ const projects = [
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
-  const heroSlides = ["20240830_154433-2048x1536.jpg", "IMG-20240808-WA0019-1536x1152.jpg", "20240409_160012.jpg"];
 
   useEffect(() => {
     const timer = window.setInterval(() => setActiveSlide((current) => (current + 1) % heroSlides.length), 4000);
