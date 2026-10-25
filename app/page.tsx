@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const media = "https://www.rgrgraffix.co.za/wp-content/uploads/2025/09/";
+const media = "/images/";
 const services = [
   "Signage",
   "Vehicle Branding and Wrapping",
