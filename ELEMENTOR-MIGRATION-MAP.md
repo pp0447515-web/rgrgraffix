@@ -14,8 +14,8 @@ This is a translation guide, not a runtime dependency. The Next.js site uses its
 
 ## Styling decisions applied
 
-- Restored the source site's global **yellow accent** (`#FCF622`) and **red action colour** (`#FC2222`) as separate tokens. Yellow is used for highlights; red remains the high-contrast call-to-action colour.
-- Changed the display-heading font to **Inter Tight**, matching the Elementor global typography kit. DM Sans remains the body font for continuity with the current layout.
+- The original kit defines a dark `#111111` background, white headings, muted grey `#888888` body text, and a red `#FC2222` action color. Do not use yellow as a decorative/highlight color in the Next.js design; the presence of a yellow token in the global kit is not a reason to make it a prominent UI highlight.
+- Use **Inter Tight** for body text and headings, matching the Elementor global typography kit. The exported kit sets body text to `1.125rem` with `1.6` line-height on desktop and reduces it to `1rem` on tablet/mobile. Global heading sizes start at H1 `4rem`, H2 `3rem`, H3 `2.5rem`, H4 `2.125rem`, H5 `1.5rem`, and H6 `1.25rem`, with responsive reductions at 1024px and 767px.
 - Preserved the Next.js-specific 800ms image/overlay/content hover transitions and the responsive logo ticker (five logos on desktop, four at tablet widths, two on mobile).
 - Added visible keyboard focus and reduced-motion handling without requiring Elementor JavaScript.
 
@@ -23,6 +23,8 @@ This is a translation guide, not a runtime dependency. The Next.js site uses its
 
 The original CSS refers to WordPress uploads such as `/wp-content/uploads/2025/09/1-1.jpg` through `6-1.jpg`, `Untitled-design-10.jpg`, `Untitled-design-13.jpg`, `Untitled-design-14.jpg`, and other project-specific files. These are CSS background references, not all confirmed to exist in `public/images/`. The current Next.js page already uses local hero images `1.jpg`, `3.jpg`, `4.jpg`, `5.jpg`, `6.jpg`, `8.jpg` and local project images. Before replacing those with WordPress-specific gallery assets, copy only the selected, optimized image files into `public/images/` and update the page to reference the local paths. Do not import the full WordPress uploads directory.
 
-## Important limitation
+## Important migration boundary
 
-The CSS files identify style values and some background asset names, but they do not contain the original Elementor page structure, text, widget settings, or all media bytes. Visual matching of every individual page requires checking the rendered original site and selecting the corresponding local assets. Keep this folder only until that comparison is complete, then remove it from the repo.
+The repository contains the exported Elementor CSS files and a subset of media assets, but `app/page.tsx` is still a simplified hand-built single page. The CSS files describe multiple Elementor documents and depend on original section markup, widget structure, page text, and media assets. Reproducing every page faithfully requires the matching WordPress page/template content and uploads, not just applying the CSS files wholesale.
+
+The CSS references include `Untitled-design-10.jpg`, `Untitled-design-13.jpg`, `Untitled-design-14.jpg`, `IMG_20200730_105059-scaled.jpg`, `20240916_165024-scaled.jpg`, `Safety-Signage.png`, and numbered `1-3.jpg`–`6-3.jpg` assets. Copy the exact required files from the WordPress backup into `public/images/` and map each page's original content before removing `original-elementor-css/`. Do not import the entire uploads directory into Git.
