@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
 
-:root{--ink:#171717;--paper:#f5f3ef;--accent:#c62828;--accent-soft:#f6e7e7;--muted:#777;--line:#d8d5cf;--max:1240px}
+:root{--ink:#171717;--paper:#f5f3ef;--accent:#f04b2f;--accent-soft:#fce9e5;--muted:#777;--line:#d8d5cf;--max:1240px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
