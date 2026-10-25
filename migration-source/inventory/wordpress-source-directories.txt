@@ -1,0 +1,3 @@
+/Users/alvinsegal/Downloads/backup/homedir/public_html/wp-content/plugins
+/Users/alvinsegal/Downloads/backup/homedir/public_html/wp-content/uploads/elementor/css
+/Users/alvinsegal/Downloads/backup/homedir/public_html/wp-content/themes
