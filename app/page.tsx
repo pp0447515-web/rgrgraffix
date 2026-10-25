@@ -32,6 +32,15 @@ export default function HomePage() {
     const timer = window.setInterval(() => setActiveSlide((current) => (current + 1) % heroSlides.length), 4000);
     return () => window.clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    const updateHeader = () => {
+      document.querySelector(".site-header")?.classList.toggle("is-scrolled", window.scrollY > 40);
+    };
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
   const [service, setService] = useState("Stickers");
   const [submitted, setSubmitted] = useState(false);
 
