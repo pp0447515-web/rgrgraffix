@@ -76,10 +76,16 @@ export default function HomePage() {
         <section className="trust section-wrap">
           <p className="eyebrow">PROUD TO WORK WITH</p>
           <h2>Trusted by Industry Leaders</h2>
-          <div className="client-logos">
-            {["Logo-Client-1-1.png", "Logo-Client-2-1.png", "Logo-Client-3-1.png", "Logo-Client-4-1.png", "Logo-Client-5-75x62.png"].map((logo) =>
-              <img key={logo} src={media + logo} alt="RGR Graffix client" />
-            )}
+          <div className="client-ticker" role="region" aria-label="Client logos">
+            <div className="client-logos-track">
+              {[1, 2].map((copy) => (
+                <div className="client-logos" key={copy} aria-hidden={copy === 2 ? "true" : undefined}>
+                  {["Logo-Client-5.png", "Logo-Client-4.png", "Logo-Client-3.png", "Logo-Client-2.png", "Logo-Client-1.png"].map((logo) =>
+                    <img key={logo} src={media + logo} alt={copy === 1 ? logo.replace(".png", "").replaceAll("-", " ") : ""} />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
