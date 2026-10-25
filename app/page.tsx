@@ -9,7 +9,7 @@ const services = [
   "Large Format Printing",
   "Safety Signs",
   "Apparel",
-  "Vehicle Accessories",
+  "Graphic Design",
 ];
 
 const projects = [
