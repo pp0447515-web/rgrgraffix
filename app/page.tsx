@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const media = "/images/";
-const heroSlides = ["1.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "8.jpg"];
+const heroSlides = ["1-1.jpg", "2-1.jpg", "3-1.jpg", "4-1.jpg", "5-1.jpg", "6-1.jpg"];
 const services = [
   "Signage",
   "Vehicle Branding and Wrapping",
