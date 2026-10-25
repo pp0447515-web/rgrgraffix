@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const media = "/images/";
-const heroSlides = ["20240830_154433-2048x1536.jpg", "IMG-20240808-WA0019-1536x1152.jpg", "20240409_160012.jpg"];
+const heroSlides = ["1.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "8.jpg"];
 const services = [
   "Signage",
   "Vehicle Branding and Wrapping",
@@ -61,7 +61,8 @@ export default function HomePage() {
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => <img key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" />)}</div>\n          <div className="hero-overlay" />
+          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => <img key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" />)}</div>
+          <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow">SIGNAGE · PRINTING · BRANDING</p>
             <h1>Brand Better<br /><em>with us.</em></h1>
