@@ -14,14 +14,14 @@ const services = [
 ];
 
 const projects = [
-  { title: "Rev tech polo", image: "20240916_165024-scaled.jpg" },
-  { title: "Quite m3", image: "20241109_193505-scaled.jpg" },
-  { title: "Nabeels gti 8", image: "IMG-20240808-WA0019-1536x1152.jpg" },
-  { title: "Marvin uno wrap", image: "IMG-20211102-WA0052-1.jpg" },
-  { title: "Jealousy", image: "IMG-20240814-WA0171-768x346.jpg" },
-  { title: "Jd 35 edition", image: "IMG-20190908-WA0056-1-1024x768.jpg" },
-  { title: "Ford ranger", image: "20240409_160012.jpg" },
-  { title: "Amarok ppf", image: "20240830_154433-2048x1536.jpg" },
+  { title: "Vehicle Branding", image: "1-3.jpg" },
+  { title: "Custom Wraps", image: "2-3.jpg" },
+  { title: "Vehicle Graphics", image: "3-3.jpg" },
+  { title: "Vinyl & Decals", image: "4-3.jpg" },
+  { title: "Custom Design", image: "5-3.jpg" },
+  { title: "Branding Projects", image: "6-3.jpg" },
+  { title: "Signage & Print", image: "Safety-Signage.png" },
+  { title: "Creative Projects", image: "Untitled-design-14.jpg" },
 ];
 
 export default function HomePage() {
