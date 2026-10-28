@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
@@ -33,7 +34,7 @@ export default function LegalPage({ page }: { page: LegalPageData }) {
       <SiteHeader />
       <main id="main-content" className="inner-page legal-page">
         <section className="inner-hero">
-          <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.48)),url("/images/Untitled-design-10.jpg")' }} />
+          <div className="inner-hero-image"><Image src="/images/Untitled-design-10.jpg" alt="" fill sizes="100vw" quality={78} priority /></div>
           <div className="inner-hero-content">
             <p className="eyebrow">RGR GRAFFIX PTY (LTD)</p>
             <h1>{page.title}</h1>
