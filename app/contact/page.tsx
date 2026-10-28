@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-export const metadata: Metadata = { title: "Contact RGR Graffix", description: "Contact RGR Graffix in Mitchells Plain, Cape Town for signage, vehicle branding, printing, safety signs and apparel enquiries.", alternates: { canonical: "/contact" } };
+export const metadata: Metadata = { title: "Contact Us", description: "Contact RGR Graffix in Mitchells Plain, Cape Town for signage, vehicle branding, printing, safety signs and apparel enquiries.", alternates: { canonical: "/contact" } };
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,7 @@ export default function ContactPage() {
       <SiteHeader />
       <main id="main-content" className="inner-page">
         <section className="inner-hero">
-          <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/20240916_165024-scaled.jpg")' }} />
+          <div className="inner-hero-image"><Image src="/images/20240916_165024-scaled.jpg" alt="" fill sizes="100vw" quality={78} priority /></div>
           <div className="inner-hero-content"><p className="eyebrow">Contact Us</p><h1>Let’s Get in Touch</h1><p className="inner-hero-intro">Reach Out Anytime, Anywhere</p></div>
         </section>
         <section className="section-wrap contact-page-content">
