@@ -1,5 +1,5 @@
 export type ServiceItem = { title: string; description?: string; image?: string };
-export type ServicePageData = { slug: string; title: string; eyebrow: string; intro?: string; images: string[]; items: ServiceItem[] };
+export type ServicePageData = { slug: string; title: string; eyebrow: string; intro?: string; contentTitle?: string; images: string[]; items: ServiceItem[] };
 
 export const servicePages: ServicePageData[] = [
   {
@@ -46,25 +46,28 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "safety-signs",
-    title: "Safety First, Always Visible",
+    title: "Safety Signs",
     eyebrow: "Safety Signs",
+    contentTitle: "Safety First, Always Visible",
+    intro: "Ensure compliance and protect people with our durable, high-visibility safety signs. From warning and health signs to construction and directional boards, we deliver signage that keeps workplaces safe and organized.",
     images: ["Safety-Signage.png", "7-5.jpg", "96713380_532905940732004_6007846918464471040_n.jpg", "image-11.jpg", "image-12.jpg", "4-1.jpg"],
     items: [
       { title: "Reflective and Non-Reflective Magnets", description: "Custom vehicle magnets available in reflective or non-reflective finishes for advertising.", image: "4-1.jpg" },
       { title: "Warning Signs", description: "Clear and durable warning signs designed to communicate hazards and ensure public safety.", image: "Safety-Signage.png" },
       { title: "Health and Safety Signs", description: "Compliant safety signage to promote awareness and maintain safe environments.", image: "7-5.jpg" },
-      { title: "Construction Signs", image: "96713380_532905940732004_6007846918464471040_n.jpg" },
-      { title: "Directional / Information Boards", image: "image-11.jpg" },
+      { title: "Construction Signs", description: "Custom vehicle magnets available in reflective or non-reflective finishes for advertising.", image: "96713380_532905940732004_6007846918464471040_n.jpg" },
+      { title: "Directional / Information Boards", description: "Custom vehicle magnets available in reflective or non-reflective finishes for advertising.", image: "image-11.jpg" },
     ],
   },
   {
     slug: "apparel",
-    title: "Custom Printing & Novelty Items | Apparel, Cups, Invitations & More",
+    title: "Apparel",
     eyebrow: "Apparel",
+    contentTitle: "Custom Printing & Novelty Items | Apparel, Cups, Invitations & More",
     intro: "Discover professional DTF printing for apparel, safety vests, and uniforms, plus custom novelty items like cups and invitations. High-quality, durable prints for every occasion.",
     images: ["124073065_651581528864444_4303563664991341556_n.jpg", "124371040_651918595497404_6441305460869706927_n.jpg", "Untitled-design.jpg"],
     items: [
-      { title: "DTF Printing on Apparel (T-Shirts, Safety Vests and More)", image: "124073065_651581528864444_4303563664991341556_n.jpg" },
+      { title: "DTF Printing on Apparel (T-Shirts, Safety Vests and More)", description: "High-quality Direct-to-Film (DTF) printing for all types of apparel. From t-shirts and safety vests to uniforms and custom wear, we deliver vibrant, durable prints that bring your designs to life.", image: "124073065_651581528864444_4303563664991341556_n.jpg" },
       { title: "Novelty Items (Cups, Invitations and More)", description: "Personalized novelty items designed to make every occasion special. From custom-printed cups and mugs to invitations and gifts, we create unique products tailored to your needs.", image: "124371040_651918595497404_6441305460869706927_n.jpg" },
     ],
   },
