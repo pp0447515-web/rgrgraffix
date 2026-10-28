@@ -20,7 +20,9 @@ export default function SiteHeader() {
   }, []);
   const close = () => setMenuOpen(false);
   return (
-    <header className="site-header">
+    <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <header className="site-header">
       <a className="brand" href="/" aria-label="RGR Graffix home">
         <img src="/images/Apparell-Design-Print-1.png" alt="RGR Graffix" />
       </a>
@@ -36,10 +38,12 @@ export default function SiteHeader() {
             {serviceLinks.map((item) => <a key={item.href} href={item.href} onClick={close}>{item.label}</a>)}
           </div>
         </div>
-        <a href="/custom-project" onClick={close}>Custom Projects</a>\n        <a href="/gallery" onClick={close}>Gallery</a>
+        <a href="/custom-project" onClick={close}>Custom Projects</a>
+        <a href="/gallery" onClick={close}>Gallery</a>
         <a href="/contact" onClick={close}>Contact</a>
         <a className="nav-cta" href="/contact" onClick={close}>Get in Touch </a>
       </nav>
-    </header>
+      </header>
+    </>
   );
 }
