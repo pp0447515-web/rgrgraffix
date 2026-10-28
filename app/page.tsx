@@ -133,7 +133,7 @@ export default function HomePage() {
             <label>Full Name<input name="name" placeholder="Enter your full name" required /></label>
             <div className="form-row"><label>Email Address *<input name="email" type="email" placeholder="Enter your email" required /></label><label>Phone Number<input name="phone" type="tel" placeholder="Your phone number" /></label></div>
             <label>Address<input name="address" placeholder="Your address" /></label>
-            <label>Service Required<select value={service} onChange={(event) => setService(event.target.value)}>{["Stickers", ...services.map((item) => item.title), "Other"].map((item) => <option key={item}>{item}</option>)}</select></label>
+            <label>Service Required<select name="service" value={service} onChange={(event) => setService(event.target.value)}>{["Stickers", ...services.map((item) => item.title), "Other"].map((item) => <option key={item}>{item}</option>)}</select></label>
             <label>Additional Notes<textarea name="notes" rows={3} placeholder="Any special request?" /></label>
             <button className="button button-dark" type="submit">Send Enquiry </button>
             <p className="form-note">Submitting opens your email application.</p>
