@@ -292,3 +292,12 @@ img{max-width:100%}
  .legal-section p,.legal-section li,.legal-contact p{font-size:14px;line-height:1.8}
  .legal-contact{padding:22px}
 }
+
+/* How-it-works page layout. */
+.how-it-works-content{padding-top:70px;padding-bottom:100px}
+.how-it-works-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.how-it-works-card{background:#181818;border:1px solid #ffffff16;padding:28px;min-width:0}
+.how-it-works-card h2{color:#fff;font-size:22px;line-height:1.25;text-transform:uppercase;margin:24px 0 12px}
+.how-it-works-card p{font-size:14px;line-height:1.8;color:#aaa;margin:0}
+@media(max-width:1024px){.how-it-works-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){.how-it-works-content{padding-top:45px;padding-bottom:65px}.how-it-works-grid{grid-template-columns:1fr}.how-it-works-card{padding:23px}}
