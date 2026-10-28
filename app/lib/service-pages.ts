@@ -4,8 +4,10 @@ export type ServicePageData = { slug: string; title: string; eyebrow: string; in
 export const servicePages: ServicePageData[] = [
   {
     slug: "signage",
-    title: "Powerful Signage That Gets You Noticed",
+    title: "Signage",
     eyebrow: "Signage",
+    contentTitle: "Powerful Signage That Gets You Noticed",
+    intro: "From banners and magnetic signs to shop signage and window frosting, we create professional, durable, and eye-catching signs that showcase your brand, promote your message, and leave a lasting impression.",
     images: ["1-3.jpg", "2-3.jpg", "3-3.jpg", "4-3.jpg", "5-3.jpg", "6-3.jpg", "20231206_211224-scaled.jpg", "Untitled-design-14.jpg"],
     items: [
       { title: "Banners", description: "Durable, eye-catching banners designed to promote your events, sales, or brand with impact.", image: "1-3.jpg" },
@@ -15,13 +17,15 @@ export const servicePages: ServicePageData[] = [
       { title: "Funeral Boards", description: "Respectful and dignified boards designed for funerals and memorial services.", image: "5-3.jpg" },
       { title: "Shop Signage", description: "Custom shop signs crafted in Perspex, Chromodeck, or vinyl to enhance your storefront.", image: "6-3.jpg" },
       { title: "Construction Sign Boards", description: "Strong, weather-resistant boards for construction sites, safety info, and project branding.", image: "20231206_211224-scaled.jpg" },
-      { title: "Window Frosting", image: "Untitled-design-14.jpg" },
+      { title: "Window Frosting", description: "Stylish window frosting with optional branding for privacy, elegance, and professionalism.", image: "Untitled-design-14.jpg" },
     ],
   },
   {
     slug: "vehicle-branding-and-wrapping",
-    title: "Drive Your Brand Everywhere",
+    title: "Vehicle Branding and Wrapping",
     eyebrow: "Vehicle Branding and Wrapping",
+    contentTitle: "Drive Your Brand Everywhere",
+    intro: "Turn every journey into a marketing opportunity with high-impact vehicle wraps, decals, and full branding solutions. From cars and taxis to trucks and buses, we design bold, professional graphics that get your business noticed on the move.",
     images: ["67839881_367065233982743_8305294069773369344_n.jpg", "95477089_532485307440734_2654642457282609152_n.jpg", "Untitled-design-15.jpg", "Untitled-design-16.jpg", "5.jpg"],
     items: [
       { title: "Vehicle Stickers and Graphics", description: "High-quality stickers and graphics that personalize your vehicle and promote your brand on the go.", image: "67839881_367065233982743_8305294069773369344_n.jpg" },
@@ -29,13 +33,15 @@ export const servicePages: ServicePageData[] = [
       { title: "Full Branding Wraps", description: "Complete vehicle coverage with bold designs to showcase your brand identity everywhere you travel.", image: "Untitled-design-15.jpg" },
       { title: "Custom Car Decals and Designs", description: "Unique, custom-designed decals that give your car a distinctive look and creative flair.", image: "Untitled-design-16.jpg" },
       { title: "Taxi Branding", description: "Professional taxi wraps and decals designed to boost visibility and attract daily impressions.", image: "5.jpg" },
-      { title: "Truck and Bus Branding", image: "1-3.jpg" },
+      { title: "Truck and Bus Branding", description: "Large-scale branding solutions for trucks and buses to advertise your business on the move.", image: "1-3.jpg" },
     ],
   },
   {
     slug: "large-format-printing",
-    title: "Big Prints, Bigger Impact",
+    title: "Large Format Printing",
     eyebrow: "Large Format Printing",
+    contentTitle: "Big Prints, Bigger Impact",
+    intro: "Showcase your brand in bold style with our large format printing solutions. From posters and banners to billboards and display graphics, we deliver vibrant, high-quality prints that grab attention and make a lasting impression.",
     images: ["67059928_358895678133032_7981487083644518400_n.jpg", "67695159_358302308192369_8667096883518242816_n.jpg", "67839881_367065233982743_8305294069773369344_n.jpg", "84716356_481015819254350_4938297785704251392_n.jpg", "84740037_481013679254564_2288591293816766464_n.jpg", "image-12.jpg"],
     items: [
       { title: "Decals and Stickers (Digital and More)", description: "Custom decals and stickers in any size or design, perfect for branding, promotions, or personal use.", image: "67839881_367065233982743_8305294069773369344_n.jpg" },
