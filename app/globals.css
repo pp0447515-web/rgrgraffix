@@ -272,3 +272,23 @@ img{max-width:100%}
 @media(prefers-reduced-motion:reduce){
   .site-header,.brand,.brand img,.site-header .nav{transition:none!important}
 }
+
+/* Legal pages: readable long-form policies consistent with the site's dark visual system. */
+.legal-content{max-width:980px;padding-top:54px;padding-bottom:100px}
+.legal-updated{font-size:12px;color:#aaa;margin:0 0 36px}
+.legal-section{padding:0 0 26px;margin:0 0 27px;border-bottom:1px solid #ffffff16}
+.legal-section h2,.legal-contact h2{color:#fff;font-size:clamp(21px,2.5vw,29px);line-height:1.2;text-transform:none;margin:0 0 14px}
+.legal-section p,.legal-section li,.legal-contact p{font-size:15px;line-height:1.9;color:#b7b7b7}
+.legal-section p{margin:0 0 13px}
+.legal-section ul{margin:0;padding-left:23px}
+.legal-section li{padding-left:5px;margin:0 0 8px}
+.legal-contact{background:#1b1b1b;border:1px solid #ffffff18;padding:28px;margin-top:42px}
+.legal-contact p{margin:8px 0}
+.legal-contact a{color:#fff;text-decoration:underline;text-decoration-color:#fc2222;text-underline-offset:4px}
+.legal-related{padding-top:10px;font-size:12px!important}
+.legal-related a{white-space:nowrap}
+@media(max-width:767px){
+ .legal-content{padding-top:38px;padding-bottom:65px}
+ .legal-section p,.legal-section li,.legal-contact p{font-size:14px;line-height:1.8}
+ .legal-contact{padding:22px}
+}
