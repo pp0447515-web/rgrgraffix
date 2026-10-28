@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <main className="inner-page">
+      <main id="main-content" className="inner-page">
         <section className="inner-hero">
           <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/20240916_165024-scaled.jpg")' }} />
           <div className="inner-hero-content"><p className="eyebrow">Contact Us</p><h1>Let’s Get in Touch</h1><p className="inner-hero-intro">Reach Out Anytime, Anywhere</p></div>
