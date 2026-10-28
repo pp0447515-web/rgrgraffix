@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://www.rgrgraffix.co.za";
+
+const interTight = Inter_Tight({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], display: "swap", variable: "--font-inter-tight" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,7 +61,7 @@ const businessJsonLd = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-ZA">
-      <body>
+      <body className={interTight.variable}>
         {children}
         <script
           type="application/ld+json"
