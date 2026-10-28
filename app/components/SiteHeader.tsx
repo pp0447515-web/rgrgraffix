@@ -38,7 +38,7 @@ export default function SiteHeader() {
         </div>
         <a href="/gallery" onClick={close}>Gallery</a>
         <a href="/contact" onClick={close}>Contact</a>
-        <a className="nav-cta" href="/contact" onClick={close}>Get in Touch <span>↗</span></a>
+        <a className="nav-cta" href="/contact" onClick={close}>Get in Touch </a>
       </nav>
     </header>
   );
