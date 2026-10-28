@@ -107,7 +107,7 @@ export default function HomePage() {
             <a className="text-link" href="/gallery">View Gallery <span>↗</span></a>
           </div>
           <div className="project-grid">
-            {projects.map((project, index) => <a className="project-card" href="#contact" key={project.title}>
+            {projects.map((project, index) => <a className="project-card" href="/gallery" key={project.title}>
               <div className="project-image"><img src={media + project.image} alt={project.title} loading="lazy" /><span className="project-index">0{index + 1}</span><span className="project-view">View Project ↗</span></div>
               
             </a>)}
