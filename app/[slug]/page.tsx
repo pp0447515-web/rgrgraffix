@@ -30,7 +30,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.title}</h1>
             {page.intro && <p className="inner-hero-intro">{page.intro}</p>}
-            <Link className="button button-light" href="/contact">Get in Touch <span>↗</span></Link>
+            <Link className="button button-light" href="/contact">Get in Touch </Link>
           </div>
         </section>
         <section className="service-detail-content section-wrap">
@@ -46,7 +46,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </article>
             ))}
           </div>
-          <div className="service-next-step"><div><p className="eyebrow">RGR GRAFFIX</p><h2>Bring your next project to life.</h2></div><Link className="button button-light" href="/contact">Contact Us <span>↗</span></Link></div>
+          <div className="service-next-step"><div><p className="eyebrow">RGR GRAFFIX</p><h2>Book Appointment</h2></div><Link className="button button-light" href="/contact">Contact Us </Link></div>
           <div className="service-page-links"><Link href="/services">All services</Link><Link href="/">Back to home</Link></div>
         </section>
       </main>
