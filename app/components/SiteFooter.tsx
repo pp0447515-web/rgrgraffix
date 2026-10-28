@@ -37,10 +37,10 @@ export default function SiteFooter() {
             <h4>HELP</h4>
             <a href="/contact">Customer Support</a>
             <a href="/services">How It Works</a>
-            <a href="https://www.rgrgraffix.co.za/terms-and-conditions/" target="_blank" rel="noreferrer">Terms &amp; Conditions</a>
-            <a href="https://www.rgrgraffix.co.za/privacy-policy/" target="_blank" rel="noreferrer">Privacy Policy</a>
-            <a href="https://www.rgrgraffix.co.za/terms-of-use/" target="_blank" rel="noreferrer">Terms of Use</a>
-            <a href="https://www.rgrgraffix.co.za/cookie-policy/" target="_blank" rel="noreferrer">Cookie Policy</a>
+            <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-use">Terms of Use</a>
+            <a href="/cookie-policy">Cookie Policy</a>
           </div>
 
           <div>
