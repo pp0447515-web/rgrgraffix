@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Validate internal links and image assets
+        run: node scripts/validate-site.mjs
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
