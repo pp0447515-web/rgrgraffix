@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
@@ -12,7 +13,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const page = servicePages.find((item) => item.slug === slug);
-  return { title: page ? `${page.eyebrow} | RGR Graffix` : "Services | RGR Graffix" };
+  return page
+    ? {
+        title: page.title,
+        description: page.intro ?? `Explore ${page.title.toLowerCase()} services from RGR Graffix in Mitchells Plain, Cape Town.`,
+        alternates: { canonical: `/${page.slug}` },
+        openGraph: { title: page.title, description: page.intro ?? `Explore ${page.title} services from RGR Graffix in Cape Town.` },
+      }
+    : { title: "Services", description: "Explore RGR Graffix signage, printing and branding services.", alternates: { canonical: "/services" } };
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -50,7 +58,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="service-detail-grid">
             {page.items.map((item, index) => (
               <article className="service-detail-card" key={item.title}>
-                {item.image && <div className="service-detail-image"><img src={`/images/${item.image}`} alt={item.title} loading="lazy" /></div>}
+                {item.image && <div className="service-detail-image"><Image src={`/images/${item.image}`} alt={`${item.title} by RGR Graffix`} width={800} height={600} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" quality={78} loading="lazy" /></div>}
                 <div className="service-detail-card-copy"><span className="service-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3>{item.description && <p>{item.description}</p>}</div>
               </article>
             ))}
