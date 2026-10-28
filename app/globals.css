@@ -300,3 +300,8 @@ img{max-width:100%}
 .how-it-works-card p{font-size:14px;line-height:1.8;color:#aaa;margin:0}
 @media(max-width:1024px){.how-it-works-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:767px){.how-it-works-content{padding-top:45px;padding-bottom:65px}.how-it-works-grid{grid-template-columns:1fr}.how-it-works-card{padding:23px}}
+
+/* Optimized page hero images and a consistent readable overlay. */
+.inner-hero-image{background-image:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28));}
+.inner-hero-image img{object-fit:cover;object-position:center 45%;}
+.inner-hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.06));pointer-events:none;}
