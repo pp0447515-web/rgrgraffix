@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const serviceLinks = [
   { label: "Signage", href: "/signage" },
   { label: "Vehicle Branding", href: "/vehicle-branding-and-wrapping" },
@@ -13,7 +15,7 @@ export default function SiteFooter() {
         <div className="footer-main">
           <div className="footer-brand">
             <a href="/" aria-label="RGR Graffix home">
-              <img src="/images/Apparell-Design-Print-1.png" alt="RGR Graffix" />
+              <Image src="/images/Apparell-Design-Print-1.png" alt="RGR Graffix" width={420} height={120} sizes="(max-width: 700px) 80vw, 320px" quality={75} loading="lazy" />
             </a>
             <p>Branding, printing and custom designs from Mitchells Plain, Cape Town.</p>
             <div className="footer-socials" aria-label="Social media">
