@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-export const metadata: Metadata = { title: "Contact Us | RGR Graffix" };
+export const metadata: Metadata = { title: "Contact RGR Graffix", description: "Contact RGR Graffix in Mitchells Plain, Cape Town for signage, vehicle branding, printing, safety signs and apparel enquiries.", alternates: { canonical: "/contact" } };
 
 export default function ContactPage() {
   return (
