@@ -39,14 +39,12 @@ let imageCount = 0;
 
 for (const { file, text } of allSource) {
   const relative = path.relative(root, file);
-  const ids = new Set([...text.matchAll(/\bid=["']([^"']+)["']/g)].map((m) => m[1]));
   for (const match of text.matchAll(/\bhref\s*=\s*["']([^"']+)["']/g)) {
     const href = match[1];
     linkCount++;
     if (href.startsWith("#")) {
-      if (href.length > 1 && !allSource.some(({ text: source }) => new RegExp('\\bid=["\\']' + href.slice(1).replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&") + '["\\']').test(source))) {
-        errors.push(relative + ": anchor target " + href + " not found");
-      }
+      const allIds = new Set(allSource.flatMap(({ text: source }) => [...source.matchAll(/\\bid=["']([^"']+)["']/g)].map((m) => m[1])));
+      if (href.length > 1 && !allIds.has(href.slice(1))) errors.push(relative + ": anchor target " + href + " not found");
       continue;
     }
     if (/^(https?:|mailto:|tel:|sms:|#)/i.test(href)) continue;
