@@ -232,3 +232,43 @@ img{max-width:100%}
 .skip-link{position:absolute;left:16px;top:-80px;z-index:100;background:#fc2222;color:#fff;padding:12px 16px;font-size:13px;font-weight:700}
 .skip-link:focus{top:12px}
 @media(max-width:767px){.custom-project-caption{align-items:flex-start;flex-direction:column}.custom-project-caption a{margin-top:2px}}
+
+
+/* Header fidelity pass: larger original-style brand mark and smoother sticky transition. */
+.site-header{
+  position:fixed;
+  height:104px;
+  background:rgba(0,0,0,0);
+  border-bottom-color:transparent;
+  transition:background-color .42s ease,border-color .42s ease,box-shadow .42s ease,height .42s ease,backdrop-filter .42s ease;
+}
+.brand{width:min(34vw,420px);transition:width .42s cubic-bezier(.22,1,.36,1); }
+.brand img{max-height:96px;transition:max-height .42s cubic-bezier(.22,1,.36,1),transform .42s cubic-bezier(.22,1,.36,1);}
+.site-header.is-scrolled{
+  position:fixed;
+  height:82px;
+  background:rgba(0,0,0,.91);
+  border-bottom-color:rgba(255,255,255,.12);
+  box-shadow:0 8px 28px rgba(0,0,0,.12);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.site-header.is-scrolled .brand{width:min(27vw,330px)}
+.site-header.is-scrolled .brand img{max-height:72px}
+.site-header .nav{transition:color .3s ease}
+@media(max-width:1000px) and (min-width:768px){
+  .site-header{height:92px;gap:20px}
+  .brand{width:min(30vw,330px)}
+  .brand img{max-height:84px}
+  .site-header.is-scrolled{height:76px}
+  .site-header.is-scrolled .brand{width:min(25vw,280px)}
+  .site-header.is-scrolled .brand img{max-height:66px}
+}
+@media(max-width:767px){
+  .site-header,.site-header.is-scrolled{height:78px;padding:0 22px}
+  .brand,.site-header.is-scrolled .brand{width:176px}
+  .brand img,.site-header.is-scrolled .brand img{max-height:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .site-header,.brand,.brand img,.site-header .nav{transition:none!important}
+}
