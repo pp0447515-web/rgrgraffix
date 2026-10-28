@@ -22,7 +22,6 @@ export const servicePages: ServicePageData[] = [
     slug: "vehicle-branding-and-wrapping",
     title: "Drive Your Brand Everywhere",
     eyebrow: "Vehicle Branding and Wrapping",
-    intro: "Vehicle stickers and graphics, vehicle wraps, full branding wraps, custom car decals and designs, taxi branding, and truck and bus branding.",
     images: ["67839881_367065233982743_8305294069773369344_n.jpg", "95477089_532485307440734_2654642457282609152_n.jpg", "Untitled-design-15.jpg", "Untitled-design-16.jpg", "5.jpg"],
     items: [
       { title: "Vehicle Stickers and Graphics", description: "High-quality stickers and graphics that personalize your vehicle and promote your brand on the go.", image: "67839881_367065233982743_8305294069773369344_n.jpg" },
