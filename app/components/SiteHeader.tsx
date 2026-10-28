@@ -36,7 +36,7 @@ export default function SiteHeader() {
             {serviceLinks.map((item) => <a key={item.href} href={item.href} onClick={close}>{item.label}</a>)}
           </div>
         </div>
-        <a href="/custom-project" onClick={close}>Custom Projects</a>\n        <a href="/gallery" onClick={close}>Gallery</a>
+        <a href="/custom-project" onClick={close}>Custom Projects</a>        <a href="/gallery" onClick={close}>Gallery</a>
         <a href="/contact" onClick={close}>Contact</a>
         <a className="nav-cta" href="/contact" onClick={close}>Get in Touch </a>
       </nav>
