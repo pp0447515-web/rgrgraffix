@@ -21,7 +21,7 @@ export default function CustomProjectPage() {
   return (
     <>
       <SiteHeader />
-      <main className="inner-page">
+      <main id="main-content" className="inner-page">
         <section className="inner-hero">
           <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/Untitled-design-13.jpg")' }} />
           <div className="inner-hero-content">
