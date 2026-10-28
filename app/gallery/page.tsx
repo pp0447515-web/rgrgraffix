@@ -12,7 +12,7 @@ export default function GalleryPage() {
       <SiteHeader />
       <main id="main-content" className="inner-page">
         <section className="inner-hero">
-          <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.25)),url("/images/IMG_20200730_105059-scaled.jpg")' }} />
+          <div className="inner-hero-image"><Image src="/images/IMG_20200730_105059-scaled.jpg" alt="" fill sizes="100vw" quality={78} priority /></div>
           <div className="inner-hero-content"><p className="eyebrow">Gallery</p><h1>Custom Projects</h1></div>
         </section>
         <section className="section-wrap gallery-content"><p className="eyebrow"><a href="/custom-project">CUSTOM PROJECT</a></p><div className="gallery-grid">{images.map((image) => <figure key={image}><Image src={`/images/${image}`} alt={`RGR Graffix signage, printing or branding project: ${image.replace(/\.(jpg|jpeg|png|webp)$/i, "").replaceAll("-", " ")}`} width={800} height={600} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" quality={78} loading="lazy" /></figure>)}</div></section>
