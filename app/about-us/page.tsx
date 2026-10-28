@@ -16,7 +16,7 @@ export default function AboutPage() {
         </section>
         <section className="section-wrap simple-content">
           <img src="/images/Untitled-design-13.jpg" alt="RGR Graffix project" />
-          <div><p className="eyebrow">RGR GRAFFIX</p><h2>About Us</h2><p>Discover our story</p><Link className="button button-light" href="/contact">Get in Touch <span>↗</span></Link></div>
+          <div><p className="eyebrow">RGR GRAFFIX</p><h2>About Us</h2><p>Discover our story</p><Link className="button button-light" href="/contact">Get in Touch </Link></div>
         </section>
       </main>
       <SiteFooter />
