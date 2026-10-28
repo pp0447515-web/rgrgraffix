@@ -43,7 +43,7 @@ for (const { file, text } of allSource) {
     const href = match[1];
     linkCount++;
     if (href.startsWith("#")) {
-      const allIds = new Set(allSource.flatMap(({ text: source }) => [...source.matchAll(/\\bid=["']([^"']+)["']/g)].map((m) => m[1])));
+      const allIds = new Set(allSource.flatMap(({ text: source }) => [...source.matchAll(/id=["']([^"']+)["']/g)].map((m) => m[1])));
       if (href.length > 1 && !allIds.has(href.slice(1))) errors.push(relative + ": anchor target " + href + " not found");
       continue;
     }
