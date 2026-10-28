@@ -12,7 +12,7 @@ export type LegalPageData = {
 };
 
 export function legalMetadata(title: string, description: string): Metadata {
-  return { title: `${title} | RGR Graffix`, description };
+  return { title, description, robots: { index: true, follow: true } };
 }
 
 export default function LegalPage({ page }: { page: LegalPageData }) {
