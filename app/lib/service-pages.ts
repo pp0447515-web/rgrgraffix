@@ -65,7 +65,7 @@ export const servicePages: ServicePageData[] = [
     intro: "Discover professional DTF printing for apparel, safety vests, and uniforms, plus custom novelty items like cups and invitations. High-quality, durable prints for every occasion.",
     images: ["124073065_651581528864444_4303563664991341556_n.jpg", "124371040_651918595497404_6441305460869706927_n.jpg", "Untitled-design.jpg"],
     items: [
-      { title: "DTF Printing on Apparel (T-Shirts, Safety Vests and More)", description: "High-quality Direct-to-Film (DTF) printing for all types of apparel. From t-shirts and safety vests to uniforms and custom wear, we deliver vibrant, durable prints that bring your", image: "124073065_651581528864444_4303563664991341556_n.jpg" },
+      { title: "DTF Printing on Apparel (T-Shirts, Safety Vests and More)", image: "124073065_651581528864444_4303563664991341556_n.jpg" },
       { title: "Novelty Items (Cups, Invitations and More)", description: "Personalized novelty items designed to make every occasion special. From custom-printed cups and mugs to invitations and gifts, we create unique products tailored to your needs.", image: "124371040_651918595497404_6441305460869706927_n.jpg" },
     ],
   },
