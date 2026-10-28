@@ -49,7 +49,7 @@ export default function HomePage() {
     <>
       <SiteHeader />
 
-      <main>
+      <main id="main-content">
         <section className="hero" id="home">
           <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => <img key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" />)}</div>
           <div className="hero-overlay" />
