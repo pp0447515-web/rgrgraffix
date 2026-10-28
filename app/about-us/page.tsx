@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <main className="inner-page">
+      <main id="main-content" className="inner-page">
         <section className="inner-hero">
           <div
             className="inner-hero-image"
