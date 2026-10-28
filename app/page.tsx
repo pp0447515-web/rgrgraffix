@@ -57,10 +57,10 @@ export default function HomePage() {
             <p className="eyebrow">SIGNAGE · PRINTING · BRANDING</p>
             <h1>Brand Better<br /><em>with us.</em></h1>
             <p className="hero-subtitle">Bold Designs. Lasting Impressions.</p>
-            <p className="hero-copy">At RGR Graffix, we bring creativity to life with high-quality signage, printing, and branding solutions. From safety signs to custom apparel, we design with precision to make your brand stand out everywhere.</p>
+            
             <a className="button button-light" href="#services">Explore Our Services <span>↗</span></a>
           </div>
-          <div className="hero-bottom"><span>Follow us</span><span className="socials"><a href="https://www.facebook.com/" aria-label="Facebook">f</a><a href="https://www.instagram.com/" aria-label="Instagram">◎</a><a href="https://www.tiktok.com/" aria-label="TikTok">♪</a></span><span className="hero-index">{String(activeSlide + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}</span></div>
+          <div className="hero-bottom"><span>Follow us</span><span className="hero-index">{String(activeSlide + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}</span></div>
         </section>
 
         <section className="trust section-wrap">
@@ -80,13 +80,13 @@ export default function HomePage() {
         </section>
 
         <section className="about section-wrap" id="about">
-          <div className="about-art"><div className="about-art-frame"><span>RGR</span><small>MAKE YOUR MARK</small></div><div className="year-stamp"><strong>2012</strong><span>ESTABLISHED</span></div></div>
+          <div className="about-art about-source-art">
+            <img src={media + "Untitled-design-13.jpg"} alt="RGR Graffix creative work" loading="lazy" />
+          </div>
           <div className="about-copy">
-            <p className="eyebrow">DISCOVER OUR STORY</p>
-            <h2>Built on creativity.<br /><em>Driven by detail.</em></h2>
-            <p>Founded in 2012 in Mitchells Plain, Western Cape, RGR Graffix began as a passion for stickers and vehicle branding. What started as a hobby grew through the trust and happiness of our customers.</p>
-            <p>Today, we bring brands to life through PVC banners, vinyl products, vehicle branding, shop and window signage, custom decals, apparel branding and more — with a customer-first approach and a commitment to timely service.</p>
-            <a className="text-link" href="#contact">More About Us <span>↗</span></a>
+            <p className="eyebrow">ABOUT US</p>
+            <h2>Discover our<br /><em>story.</em></h2>
+            <a className="text-link" href="/about-us">About Us <span>↗</span></a>
           </div>
         </section>
 
