@@ -30,7 +30,7 @@ button,input,textarea,select{font:inherit}
 @media(max-width:400px){.project-grid{grid-template-columns:1fr}.project-image{aspect-ratio:1/1}.service-grid{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.hero h1{font-size:54px}}
 
 
-/* Elementor migration refinements: preserve the original yellow/red palette and keyboard states. */
+/* Elementor migration refinements: preserve red actions and keyboard states. */
 .nav-cta,.button-light,.button-dark,.chat-link{background:var(--action);color:#fff}
 .service-card:hover{background:var(--accent-soft);color:var(--ink)}
 .project-index{background:var(--accent);color:var(--ink)}
