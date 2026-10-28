@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
@@ -51,7 +52,7 @@ export default function HomePage() {
 
       <main id="main-content">
         <section className="hero" id="home">
-          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => <img key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" />)}</div>
+          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => ({ slide, index })).filter(({ index }) => index === activeSlide || index === (activeSlide + 1) % heroSlides.length).map(({ slide, index }) => <Image key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" fill sizes="100vw" quality={78} priority={index === 0} loading={index === activeSlide ? "eager" : "lazy"} />)}</div>
           <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow">SIGNAGE · PRINTING · BRANDING</p>
@@ -71,7 +72,7 @@ export default function HomePage() {
               {[1, 2].map((copy) => (
                 <div className="client-logos" key={copy} aria-hidden={copy === 2 ? "true" : undefined}>
                   {["Logo-Client-5.png", "Logo-Client-4.png", "Logo-Client-3.png", "Logo-Client-2.png", "Logo-Client-1.png"].map((logo) =>
-                    <img key={logo} src={media + logo} alt={copy === 1 ? logo.replace(".png", "").replaceAll("-", " ") : ""} />
+                    <Image key={logo} src={media + logo} alt={copy === 1 ? logo.replace(".png", "").replaceAll("-", " ") : ""} width={300} height={100} sizes="(max-width: 700px) 35vw, 20vw" quality={75} loading="lazy" />
                   )}
                 </div>
               ))}
@@ -81,7 +82,7 @@ export default function HomePage() {
 
         <section className="about section-wrap" id="about">
           <div className="about-art about-source-art">
-            <img src={media + "Untitled-design-13.jpg"} alt="RGR Graffix creative work" loading="lazy" />
+            <Image src={media + "Untitled-design-13.jpg"} alt="RGR Graffix creative work" width={900} height={700} sizes="(max-width: 800px) 100vw, 50vw" quality={78} loading="lazy" />
           </div>
           <div className="about-copy">
             <p className="eyebrow">ABOUT US</p>
@@ -108,7 +109,7 @@ export default function HomePage() {
           </div>
           <div className="project-grid">
             {projects.map((project, index) => <a className="project-card" href="/gallery" key={project.title}>
-              <div className="project-image"><img src={media + project.image} alt={project.title} loading="lazy" /><span className="project-index">0{index + 1}</span><span className="project-view">View Project</span></div>
+              <div className="project-image"><Image src={media + project.image} alt={project.title} width={900} height={650} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" quality={78} loading="lazy" /><span className="project-index">0{index + 1}</span><span className="project-view">View Project</span></div>
               
             </a>)}
           </div>
