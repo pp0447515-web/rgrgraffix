@@ -1,16 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 
 const media = "/images/";
 const heroSlides = ["1-1.jpg", "2-1.jpg", "3-1.jpg", "4-1.jpg", "5-1.jpg", "6-1.jpg"];
 const services = [
-  "Signage",
-  "Vehicle Branding and Wrapping",
-  "Large Format Printing",
-  "Safety Signs",
-  "Apparel",
-  "Graphic Design",
+  { title: "Signage", href: "/signage" },
+  { title: "Vehicle Branding and Wrapping", href: "/vehicle-branding-and-wrapping" },
+  { title: "Large Format Printing", href: "/large-format-printing" },
+  { title: "Safety Signs", href: "/safety-signs" },
+  { title: "Apparel", href: "/apparel" },
+  { title: "Graphic Design", href: "/contact" },
 ];
 
 const projects = [
@@ -46,27 +48,7 @@ export default function HomePage() {
 
   return (
     <>
-      <header className="site-header">
-        <a className="brand" href="#home" aria-label="RGR Graffix home">
-          <img src={media + "Apparell-Design-Print-1.png"} alt="RGR Graffix" />
-        </a>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
-          {menuOpen ? "✕" : "☰"}
-        </button>
-        <nav className={menuOpen ? "nav nav-open" : "nav"}>
-          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
-          <div className="nav-dropdown">
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services⌄</a>
-            <div className="dropdown-menu">
-              {services.map((item) => <a key={item} href="#services">{item}</a>)}
-            </div>
-          </div>
-          <a href="#projects" onClick={() => setMenuOpen(false)}>Custom Projects</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-          <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Get in Touch <span>↗</span></a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="home">
@@ -116,7 +98,7 @@ export default function HomePage() {
               <p>Creative solutions that make your business impossible to miss.</p>
             </div>
             <div className="service-grid">
-              {services.map((item, index) => <a className="service-card" href="#contact" key={item}><span className="service-number">0{index + 1}</span><h3>{item}</h3><span className="service-arrow">↗</span></a>)}
+              {services.map((item, index) => <a className="service-card" href={item.href} key={item.title}><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><span className="service-arrow">↗</span></a>)}
             </div>
           </div>
         </section>
@@ -161,16 +143,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="footer-main">
-          <div className="footer-brand"><img src={media + "Apparell-Design-Print-1.png"} alt="RGR Graffix" /><p>Bold designs. Lasting impressions.<br />Bringing your brand to life since 2012.</p><div className="footer-socials"><a href="https://www.facebook.com/">Facebook ↗</a><a href="https://www.instagram.com/">Instagram ↗</a><a href="https://www.tiktok.com/">TikTok ↗</a></div></div>
-          <div><h4>COMPANY</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#projects">Gallery</a><a href="#contact">Contact Us</a></div>
-          <div><h4>HELP</h4><a href="#contact">Customer Support</a><a href="#services">How It Works</a><a href="#terms">Terms &amp; Conditions</a><a href="#privacy">Privacy Policy</a></div>
-          <div><h4>WORK HOURS</h4><p>Monday – Friday<br />9 AM – 5 PM</p><p>Saturday<br />9 AM – 1 PM</p><a href="mailto:info@rgrgraffix.co.za">info@rgrgraffix.co.za</a><a href="tel:+27765352861">+27 76 535 2861</a></div>
-        </div>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} RGR Graffix. All rights reserved.</span><span><a href="#terms">Terms of use</a> · <a href="#privacy">Privacy Policy</a> · <a href="#cookies">Cookie Policy</a></span></div>
-      </footer>
-      <a className="chat-link" href="https://wa.me/27765352861">Need Help? Chat with us ↗</a>
+      <SiteFooter />
     </>
   );
 }
