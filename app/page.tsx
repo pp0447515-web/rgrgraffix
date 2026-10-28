@@ -43,7 +43,7 @@ export default function HomePage() {
     return () => window.removeEventListener("scroll", updateHeader);
   }, []);
   const [service, setService] = useState("Stickers");
-  const [submitted, setSubmitted] = useState(false);
+  
 
   return (
     <>
@@ -58,9 +58,9 @@ export default function HomePage() {
             <h1>Brand Better<br /><em>with us.</em></h1>
             <p className="hero-subtitle">Bold Designs. Lasting Impressions.</p>
             
-            <a className="button button-light" href="#services">Explore Our Services <span>↗</span></a>
+            <a className="button button-light" href="#services">Explore Our Services </a>
           </div>
-          <div className="hero-bottom"><span>Follow us</span><span className="hero-index">{String(activeSlide + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}</span></div>
+          <div className="hero-bottom"><span className="hero-index">{String(activeSlide + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}</span></div>
         </section>
 
         <section className="trust section-wrap">
@@ -86,7 +86,7 @@ export default function HomePage() {
           <div className="about-copy">
             <p className="eyebrow">ABOUT US</p>
             <h2>Discover our<br /><em>story.</em></h2>
-            <a className="text-link" href="/about-us">About Us <span>↗</span></a>
+            <a className="text-link" href="/about-us">About Us </a>
           </div>
         </section>
 
@@ -96,7 +96,7 @@ export default function HomePage() {
               <div><p className="eyebrow">OUR SERVICES</p><h2>Choose Your <em>Drive.</em></h2></div>
             </div>
             <div className="service-grid">
-              {services.map((item, index) => <a className="service-card" href={item.href} key={item.title}><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><span className="service-arrow">↗</span></a>)}
+              {services.map((item, index) => <a className="service-card" href={item.href} key={item.title}><span className="service-number">0{index + 1}</span><h3>{item.title}</h3></a>)}
             </div>
           </div>
         </section>
@@ -104,11 +104,11 @@ export default function HomePage() {
         <section className="projects section-wrap" id="projects">
           <div className="section-heading">
             <div><p className="eyebrow">GALLERY</p><h2>Our <em>Work.</em></h2></div>
-            <a className="text-link" href="/gallery">View Gallery <span>↗</span></a>
+            <a className="text-link" href="/gallery">View Gallery </a>
           </div>
           <div className="project-grid">
             {projects.map((project, index) => <a className="project-card" href="/gallery" key={project.title}>
-              <div className="project-image"><img src={media + project.image} alt={project.title} loading="lazy" /><span className="project-index">0{index + 1}</span><span className="project-view">View Project ↗</span></div>
+              <div className="project-image"><img src={media + project.image} alt={project.title} loading="lazy" /><span className="project-index">0{index + 1}</span><span className="project-view">View Project</span></div>
               
             </a>)}
           </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
 
         <section className="drive-cta">
           <div><h2>Advertise while<br /><em>on the drive.</em></h2></div>
-          <a className="button button-light" href="#contact">Book Appointment <span>↗</span></a>
+          <a className="button button-light" href="#contact">Book Appointment </a>
         </section>
 
         <section className="contact section-wrap" id="contact">
@@ -127,7 +127,7 @@ export default function HomePage() {
             <div className="contact-detail"><span>EMAIL</span><a href="mailto:info@rgrgraffix.co.za">info@rgrgraffix.co.za</a></div>
             <div className="contact-detail"><span>WORK HOURS</span><p>Mon–Fri: 9:00–17:00<br />Sat: 9:00–13:00</p></div>
           </div>
-          <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }}>
+          <form className="contact-form" action="mailto:info@rgrgraffix.co.za" method="post" encType="text/plain">
             <h3>Bringing Your Brand to Life</h3>
             <p>Tell us a little about what you have in mind.</p>
             <label>Full Name<input name="name" placeholder="Enter your full name" required /></label>
@@ -135,8 +135,8 @@ export default function HomePage() {
             <label>Address<input name="address" placeholder="Your address" /></label>
             <label>Service Required<select value={service} onChange={(event) => setService(event.target.value)}>{["Stickers", ...services.map((item) => item.title), "Other"].map((item) => <option key={item}>{item}</option>)}</select></label>
             <label>Additional Notes<textarea name="notes" rows={3} placeholder="Any special request?" /></label>
-            <button className="button button-dark" type="submit">Send Enquiry <span>↗</span></button>
-            {submitted && <p className="form-note">Thanks! This demo form is not connected to email yet. We’ll connect it before launch.</p>}
+            <button className="button button-dark" type="submit">Send Enquiry </button>
+            <p className="form-note">Submitting opens your email application.</p>
           </form>
         </section>
       </main>
