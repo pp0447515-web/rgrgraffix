@@ -9,7 +9,7 @@ export default function GalleryPage() {
   return (
     <>
       <SiteHeader />
-      <main className="inner-page">
+      <main id="main-content" className="inner-page">
         <section className="inner-hero">
           <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.25)),url("/images/IMG_20200730_105059-scaled.jpg")' }} />
           <div className="inner-hero-content"><p className="eyebrow">Gallery</p><h1>Custom Projects</h1></div>
