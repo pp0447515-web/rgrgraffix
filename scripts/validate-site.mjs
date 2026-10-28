@@ -69,6 +69,8 @@ for (const { file, text } of allSource) {
   }
 }
 
+const thumbnailRefs = allSource.filter(({ file, text }) => file.endsWith(".tsx") && /-(?:75x62|150x62|150x150|300x300|768x\d+|1024x\d+)\.(?:jpe?g|png|webp)/i.test(text));
+if (thumbnailRefs.length) errors.push("Low-resolution thumbnail filename referenced in: " + thumbnailRefs.map(({ file }) => path.relative(root, file)).join(", "));
 const arrowFiles = allSource.filter(({ file, text }) => file.endsWith(".tsx") && text.includes("↗"));
 if (arrowFiles.length) errors.push("CTA arrow glyph remains in: " + arrowFiles.map(({ file }) => path.relative(root, file)).join(", "));
 if (errors.length) {
