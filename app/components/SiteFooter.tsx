@@ -17,7 +17,7 @@ export default function SiteFooter() {
             <a href="/" aria-label="RGR Graffix home">
               <Image src="/images/Apparell-Design-Print-1.png" alt="RGR Graffix" width={420} height={120} sizes="(max-width: 700px) 80vw, 320px" quality={75} loading="lazy" />
             </a>
-            <p>Branding, printing and custom designs from Mitchells Plain, Cape Town.</p>
+            <p>Branding, printing and custom designs.</p>
             <div className="footer-socials" aria-label="Social media">
               <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
               <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">TikTok</a>
