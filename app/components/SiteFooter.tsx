@@ -36,7 +36,7 @@ export default function SiteFooter() {
           <div>
             <h4>HELP</h4>
             <a href="/contact">Customer Support</a>
-            <a href="/services">How It Works</a>
+            <a href="/how-it-works">How It Works</a>
             <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/terms-of-use">Terms of Use</a>
