@@ -14,7 +14,7 @@ export default function GalleryPage() {
           <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.25)),url("/images/IMG_20200730_105059-scaled.jpg")' }} />
           <div className="inner-hero-content"><p className="eyebrow">Gallery</p><h1>Custom Projects</h1></div>
         </section>
-        <section className="section-wrap gallery-content"><div className="gallery-grid">{images.map((image) => <figure key={image}><img src={`/images/${image}`} alt="RGR Graffix project" loading="lazy" /></figure>)}</div></section>
+        <section className="section-wrap gallery-content"><p className="eyebrow"><a href="/custom-project">CUSTOM PROJECT</a></p><div className="gallery-grid">{images.map((image) => <figure key={image}><img src={`/images/${image}`} alt="RGR Graffix project" loading="lazy" /></figure>)}</div></section>
       </main>
       <SiteFooter />
     </>
