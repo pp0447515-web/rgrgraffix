@@ -59,3 +59,103 @@ body{background:#111;color:#888}
 @media(max-width:900px){.service-detail-grid,.service-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-page-content{gap:5%}}
 @media(max-width:767px){.inner-hero{min-height:420px;padding:135px 24px 48px}.inner-hero h1{font-size:clamp(42px,11vw,62px)}.service-detail-content{padding-top:55px;padding-bottom:65px}.service-detail-grid,.service-index-grid,.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-detail-card-copy{padding:17px 15px 20px}.service-detail-card h3{font-size:17px}.service-detail-card p{font-size:12px}.service-next-step{align-items:flex-start;flex-direction:column;padding:25px;margin-top:45px}.services-index-content,.gallery-content{padding-top:45px;padding-bottom:60px}.service-index-card{min-height:220px}.service-index-card>div{padding:16px}.service-index-card h2{font-size:18px}.simple-content,.contact-page-content{grid-template-columns:1fr;gap:35px;padding-top:50px;padding-bottom:60px}.simple-content>img{max-height:350px}.contact-page-content .contact-form{padding:24px}.service-page-links{flex-wrap:wrap}}
 @media(max-width:430px){.service-detail-grid,.service-index-grid,.gallery-grid{grid-template-columns:1fr}.service-index-card{min-height:250px}}
+
+
+/* Fidelity pass based on the recovered RGR Elementor kit and page CSS.
+   The kit uses Inter Tight, a #111 background, white headings, #888 body
+   copy and #FC2222 actions. Yellow is intentionally not used as a highlight. */
+:root{--ink:#fff;--paper:#111;--accent:#fc2222;--accent-soft:#1b1b1b;--action:#fc2222;--muted:#888;--line:#ffffff1a;--max:1140px}
+body{font-size:18px;line-height:1.6;color:#888;background:#111}
+h1,h2,h3,h4,h5,h6{font-family:"Inter Tight",Arial,sans-serif;color:#fff;font-weight:600}
+.hero{min-height:720px;padding:200px max(8vw,30px) 115px}
+.hero h1{font-size:clamp(48px,5.1vw,64px);line-height:1.08;letter-spacing:0;font-weight:600;margin-bottom:22px}
+.hero-subtitle{font-size:18px;line-height:1.5}
+.hero-content{max-width:740px}
+.hero .button{margin-top:12px}
+.eyebrow{font-size:12px;letter-spacing:.05em;line-height:1.2}
+.hero-bottom{min-height:58px}
+.trust{padding-top:85px;padding-bottom:90px}
+.trust h2{font-size:clamp(30px,3vw,48px);line-height:1.2;font-weight:600}
+.about{padding-top:80px;padding-bottom:120px;gap:8%}
+.about-source-art{min-height:0;aspect-ratio:4/5;background:#1b1b1b;overflow:hidden}
+.about-source-art img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.about-source-art:before,.about-source-art:after{display:none}
+.about h2,.contact h2{font-size:clamp(42px,4.2vw,64px);line-height:1.12;letter-spacing:0}
+.services-section{padding:120px 0}
+.section-heading{margin-bottom:48px}
+.section-heading h2,.projects .section-heading h2{font-size:clamp(38px,4.2vw,56px);line-height:1.15;letter-spacing:0}
+.service-card{min-height:210px;padding:28px}
+.service-card h3{font-size:24px;line-height:1.2;font-weight:600}
+.service-card:hover{background:#1b1b1b;color:#fff}
+.service-arrow{color:#fc2222}
+.projects{padding-top:120px;padding-bottom:120px}
+.project-grid{gap:30px 20px}
+.project-image{aspect-ratio:4/4.3;background:#1b1b1b}
+.project-index{background:#fc2222;color:#fff}
+.project-view{background:rgba(0,0,0,.72)}
+.drive-cta{background:linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.38)),url("/images/Untitled-design-10.jpg") center/cover no-repeat;padding:201px max(8vw,36px)}
+.drive-cta .eyebrow{color:#fff}
+.drive-cta h2{font-size:clamp(42px,5vw,64px);line-height:1.1;letter-spacing:0}
+.button{min-height:52px;padding:0 23px;font-size:12px;font-weight:600;letter-spacing:.02em}
+.button-light,.button-dark,.nav-cta{background:#fc2222;color:#fff}
+.contact{padding-top:120px;padding-bottom:120px}
+.contact-form{background:#181818;color:#fff;border:1px solid #ffffff1a}
+.contact-form h3{font-size:30px;color:#fff}
+.contact-form>p{color:#888}
+.contact-form input,.contact-form select,.contact-form textarea{background:#111;border-color:#ffffff26;color:#fff}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#777}
+.site-header{height:90px;padding:0 max(calc((100vw - 1280px)/2),5vw)}
+.site-header.is-scrolled{height:80px}
+.brand{width:min(26vw,340px)}
+.brand img{max-height:72px}
+.nav{gap:clamp(16px,2.2vw,34px);font-size:12px}
+.nav-cta{padding:15px 19px}
+.dropdown-menu{background:#111;border:1px solid #ffffff1a}
+.dropdown-menu a:hover{background:#222;color:#fff}
+.site-footer{background:#111;border-top:1px solid #ffffff1a}
+.footer-main{padding-top:15px}
+.footer-brand img{background:transparent;padding:0;width:190px;height:86px;object-fit:contain}
+.footer-bottom{border-top-color:#ffffff1a}
+.inner-hero{min-height:500px;padding-top:175px;padding-bottom:70px}
+.inner-hero h1{font-size:clamp(42px,5vw,64px);line-height:1.1;letter-spacing:0}
+.inner-hero-intro{font-size:18px;line-height:1.6}
+.service-detail-content{padding-top:112px;padding-bottom:112px}
+.service-detail-grid{gap:30px}
+.service-detail-card{background:#111;border:1px solid #ffffff1a;border-radius:0}
+.service-detail-image{aspect-ratio:4/3}
+.service-detail-card-copy{padding:25px}
+.service-detail-card h3{font-size:24px;line-height:1.2;text-transform:none}
+.service-detail-card p{font-size:16px;line-height:1.6}
+.service-next-step{background:#181818;border:1px solid #ffffff1a}
+.service-index-card{border-radius:0}
+.services-index-content,.gallery-content{padding-top:80px;padding-bottom:100px}
+.contact-page-content{padding-top:100px;padding-bottom:110px}
+:where(a,button,input,select,textarea):focus-visible{outline:2px solid #fc2222;outline-offset:4px}
+@media(max-width:1024px){
+  body{font-size:16px}
+  .hero{padding-top:160px;min-height:650px}
+  .service-detail-content{padding-top:80px;padding-bottom:80px}
+  .site-header{padding-left:40px;padding-right:40px}
+}
+@media(max-width:767px){
+  .site-header{height:76px;padding:0 20px}
+  .site-header.is-scrolled{height:76px}
+  .brand,.site-header.is-scrolled .brand{width:120px}
+  .hero{min-height:620px;padding:140px 24px 110px}
+  .hero h1{font-size:clamp(44px,11vw,56px)}
+  .hero-copy{display:none}
+  .trust{padding-top:60px;padding-bottom:65px}
+  .trust h2{font-size:28px}
+  .about{padding-top:35px;padding-bottom:75px}
+  .about-source-art{aspect-ratio:4/3;min-height:0}
+  .services-section{padding:72px 0}
+  .service-card{min-height:175px;padding:20px}
+  .projects{padding-top:75px;padding-bottom:80px}
+  .drive-cta{padding:40px 20px;background-position:center}
+  .contact{padding-top:75px;padding-bottom:75px}
+  .inner-hero{min-height:420px;padding:140px 24px 48px}
+  .inner-hero h1{font-size:clamp(40px,10vw,54px)}
+  .service-detail-grid,.service-index-grid,.gallery-grid{gap:16px}
+  .service-detail-card h3{font-size:19px}
+  .service-detail-card p{font-size:14px}
+}
