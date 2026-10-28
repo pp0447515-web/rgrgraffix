@@ -1,0 +1,56 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
+import { servicePages } from "../../lib/service-pages";
+import { notFound } from "next/navigation";
+
+export function generateStaticParams() {
+  return servicePages.map(({ slug }) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const page = servicePages.find((item) => item.slug === slug);
+  return { title: page ? `${page.eyebrow} | RGR Graffix` : "Services | RGR Graffix" };
+}
+
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const page = servicePages.find((item) => item.slug === slug);
+  if (!page) notFound();
+
+  return (
+    <>
+      <SiteHeader />
+      <main className="inner-page service-detail">
+        <section className="inner-hero">
+          <div className="inner-hero-image" style={{ backgroundImage: `linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/${page.images[0]}")` }} />
+          <div className="inner-hero-content">
+            <p className="eyebrow">{page.eyebrow}</p>
+            <h1>{page.title}</h1>
+            {page.intro && <p className="inner-hero-intro">{page.intro}</p>}
+            <Link className="button button-light" href="/contact">Get in Touch <span>↗</span></Link>
+          </div>
+        </section>
+        <section className="service-detail-content section-wrap">
+          <div className="inner-section-heading">
+            <p className="eyebrow">OUR SERVICES</p>
+            <h2>{page.eyebrow}</h2>
+          </div>
+          <div className="service-detail-grid">
+            {page.items.map((item, index) => (
+              <article className="service-detail-card" key={item.title}>
+                {item.image && <div className="service-detail-image"><img src={`/images/${item.image}`} alt={item.title} loading="lazy" /></div>}
+                <div className="service-detail-card-copy"><span className="service-number">{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3>{item.description && <p>{item.description}</p>}</div>
+              </article>
+            ))}
+          </div>
+          <div className="service-next-step"><div><p className="eyebrow">RGR GRAFFIX</p><h2>Bring your next project to life.</h2></div><Link className="button button-light" href="/contact">Contact Us <span>↗</span></Link></div>
+          <div className="service-page-links"><Link href="/services">All services</Link><Link href="/">Back to home</Link></div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
