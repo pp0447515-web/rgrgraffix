@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "About Us | RGR Graffix",
+  title: "About Us",
+  alternates: { canonical: "/about-us" },
   description: "Discover the story behind RGR Graffix, a Cape Town branding and printing company established in Mitchells Plain in 2012.",
 };
 
@@ -25,7 +27,7 @@ export default function AboutPage() {
         </section>
 
         <section className="section-wrap simple-content">
-          <img src="/images/Untitled-design-13.jpg" alt="RGR Graffix branding and printing work" />
+          <Image src="/images/Untitled-design-13.jpg" alt="RGR Graffix branding and printing work" width={900} height={700} sizes="(max-width: 800px) 100vw, 50vw" quality={78} loading="lazy" />
           <div>
             <p className="eyebrow">RGR GRAFFIX PTY (LTD)</p>
             <h2>About Us</h2>
