@@ -64,7 +64,7 @@ export default function HomePage() {
         </section>
 
         <section className="trust section-wrap">
-          <p className="eyebrow">PROUD TO WORK WITH</p>
+          
           <h2>Trusted by Industry Leaders</h2>
           <div className="client-ticker" role="region" aria-label="Client logos">
             <div className="client-logos-track">
@@ -93,8 +93,7 @@ export default function HomePage() {
         <section className="services-section" id="services">
           <div className="section-wrap">
             <div className="section-heading">
-              <div><p className="eyebrow">WHAT WE DO</p><h2>Choose Your <em>Drive.</em></h2></div>
-              <p>Creative solutions that make your business impossible to miss.</p>
+              <div><p className="eyebrow">OUR SERVICES</p><h2>Choose Your <em>Drive.</em></h2></div>
             </div>
             <div className="service-grid">
               {services.map((item, index) => <a className="service-card" href={item.href} key={item.title}><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><span className="service-arrow">↗</span></a>)}
@@ -104,26 +103,26 @@ export default function HomePage() {
 
         <section className="projects section-wrap" id="projects">
           <div className="section-heading">
-            <div><p className="eyebrow">SELECTED WORK</p><h2>Custom <em>Projects.</em></h2></div>
-            <a className="text-link" href="#contact">Start a Project <span>↗</span></a>
+            <div><p className="eyebrow">GALLERY</p><h2>Our <em>Work.</em></h2></div>
+            <a className="text-link" href="/gallery">View Gallery <span>↗</span></a>
           </div>
           <div className="project-grid">
             {projects.map((project, index) => <a className="project-card" href="#contact" key={project.title}>
               <div className="project-image"><img src={media + project.image} alt={project.title} loading="lazy" /><span className="project-index">0{index + 1}</span><span className="project-view">View Project ↗</span></div>
-              <h3>{project.title}</h3>
+              
             </a>)}
           </div>
         </section>
 
         <section className="drive-cta">
-          <div><p className="eyebrow">TAKE YOUR BRAND FURTHER</p><h2>Advertise while<br /><em>on the drive.</em></h2></div>
+          <div><h2>Advertise while<br /><em>on the drive.</em></h2></div>
           <a className="button button-light" href="#contact">Book Appointment <span>↗</span></a>
         </section>
 
         <section className="contact section-wrap" id="contact">
           <div className="contact-intro">
             <p className="eyebrow">CONTACT US</p><h2>Let’s get<br /><em>in touch.</em></h2>
-            <p>Reach out anytime, anywhere. Your journey begins with one click.</p>
+            <p>Reach Out Anytime, Anywhere</p>
             <div className="contact-detail"><span>PHONE</span><a href="tel:+27765352861">+27 76 535 2861</a></div>
             <div className="contact-detail"><span>EMAIL</span><a href="mailto:info@rgrgraffix.co.za">info@rgrgraffix.co.za</a></div>
             <div className="contact-detail"><span>WORK HOURS</span><p>Mon–Fri: 9:00–17:00<br />Sat: 9:00–13:00</p></div>
