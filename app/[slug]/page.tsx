@@ -23,7 +23,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   return (
     <>
       <SiteHeader />
-      <main className="inner-page service-detail">
+      <main id="main-content" className="inner-page service-detail">
         <section className="inner-hero">
           <div className="inner-hero-image" style={{ backgroundImage: `linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/${page.images[0]}")` }} />
           <div className="inner-hero-content">
