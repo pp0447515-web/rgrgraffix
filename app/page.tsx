@@ -52,7 +52,7 @@ export default function HomePage() {
 
       <main id="main-content">
         <section className="hero" id="home">
-          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => ({ slide, index })).filter(({ index }) => index === activeSlide || index === (activeSlide + 1) % heroSlides.length).map(({ slide, index }) => <Image key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" fill sizes="100vw" quality={78} priority={index === 0} loading={index === activeSlide ? "eager" : "lazy"} />)}</div>
+          <div className="hero-slides" aria-hidden="true">{heroSlides.map((slide, index) => ({ slide, index })).filter(({ index }) => index === activeSlide || index === (activeSlide + 1) % heroSlides.length).map(({ slide, index }) => <Image key={slide} className={index === activeSlide ? "hero-slide hero-slide-active" : "hero-slide"} src={media + slide} alt="" fill sizes="100vw" quality={78} priority={index === 0 && activeSlide === 0} fetchPriority={index === activeSlide ? "high" : "auto"} loading={index === activeSlide ? "eager" : "lazy"} />)}</div>
           <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow">SIGNAGE · PRINTING · BRANDING</p>
