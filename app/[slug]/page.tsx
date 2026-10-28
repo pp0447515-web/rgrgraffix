@@ -33,7 +33,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <SiteHeader />
       <main id="main-content" className="inner-page service-detail">
         <section className="inner-hero">
-          <div className="inner-hero-image" style={{ backgroundImage: `linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/${page.images[0]}")` }} />
+          <div className="inner-hero-image"><Image src={`/images/${page.images[0]}`} alt="" fill sizes="100vw" quality={78} priority /></div>
           <div className="inner-hero-content">
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.title}</h1>
