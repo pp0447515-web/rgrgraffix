@@ -3,18 +3,17 @@ import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-export const metadata: Metadata = { title: "Custom Project | RGR Graffix" };
+export const metadata: Metadata = { title: "Custom Projects | RGR Graffix", description: "Explore custom vehicle branding, wraps and apparel projects by RGR Graffix." };
 
 const projectImages = [
-  "Untitled-design-13.jpg",
-  "1-3.jpg",
-  "2-3.jpg",
-  "3-3.jpg",
-  "4-3.jpg",
-  "5-3.jpg",
-  "6-3.jpg",
-  "IMG_20200730_105059-scaled.jpg",
-  "20231206_211224-scaled.jpg",
+  { image: "20240916_165024-scaled.jpg", title: "Rev tech polo" },
+  { image: "20241109_193505-scaled.jpg", title: "Quite M3" },
+  { image: "IMG-20240808-WA0019-1536x1152.jpg", title: "Nabeels GTI 8" },
+  { image: "IMG-20211102-WA0052-1.jpg", title: "Marvin Uno wrap" },
+  { image: "IMG-20240814-WA0171-768x346.jpg", title: "Jealousy" },
+  { image: "IMG-20190908-WA0056-1-1024x768.jpg", title: "JD 35 Edition" },
+  { image: "20240409_160012.jpg", title: "Ford Ranger" },
+  { image: "20240830_154433-2048x1536.jpg", title: "Amarok PPF" },
 ];
 
 export default function CustomProjectPage() {
@@ -23,21 +22,27 @@ export default function CustomProjectPage() {
       <SiteHeader />
       <main id="main-content" className="inner-page">
         <section className="inner-hero">
-          <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/Untitled-design-13.jpg")' }} />
+          <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/20240916_165024-scaled.jpg")' }} />
           <div className="inner-hero-content">
             <p className="eyebrow">CUSTOM PROJECT</p>
-            <h1>Custom Project</h1>
+            <h1>Custom Projects</h1>
           </div>
         </section>
         <section className="section-wrap gallery-content">
-          <div className="gallery-grid">
-            {projectImages.map((image) => (
-              <figure key={image}><img src={`/images/${image}`} alt="RGR Graffix project" loading="lazy" /></figure>
+          <div className="gallery-grid custom-project-grid">
+            {projectImages.map((project) => (
+              <article className="custom-project-card" key={project.image}>
+                <figure><img src={`/images/${project.image}`} alt={project.title} loading="lazy" /></figure>
+                <div className="custom-project-caption">
+                  <h2>{project.title}</h2>
+                  <Link href="/contact" aria-label={`Enquire about ${project.title}`}>View Project</Link>
+                </div>
+              </article>
             ))}
           </div>
           <div className="service-next-step">
-            <div><p className="eyebrow">RGR GRAFFIX</p><h2>Book Appointment</h2></div>
-            <Link className="button button-light" href="/contact">Contact Us</Link>
+            <div><p className="eyebrow">RGR GRAFFIX</p><h2>Have a project in mind?</h2></div>
+            <Link className="button button-light" href="/contact">Get in Touch</Link>
           </div>
         </section>
       </main>
