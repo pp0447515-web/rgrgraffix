@@ -29,14 +29,23 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="inner-hero-content">
             <p className="eyebrow">{page.eyebrow}</p>
             <h1>{page.title}</h1>
-            {page.intro && <p className="inner-hero-intro">{page.intro}</p>}
+            {page.intro && !page.contentTitle && <p className="inner-hero-intro">{page.intro}</p>}
             <Link className="button button-light" href="/contact">Get in Touch </Link>
           </div>
         </section>
         <section className="service-detail-content section-wrap">
           <div className="inner-section-heading">
-            <p className="eyebrow">OUR SERVICES</p>
-            <h2>{page.eyebrow}</h2>
+            {page.contentTitle ? (
+              <>
+                <h2>{page.contentTitle}</h2>
+                {page.intro && <p className="inner-hero-intro">{page.intro}</p>}
+              </>
+            ) : (
+              <>
+                <p className="eyebrow">OUR SERVICES</p>
+                <h2>{page.eyebrow}</h2>
+              </>
+            )}
           </div>
           <div className="service-detail-grid">
             {page.items.map((item, index) => (
