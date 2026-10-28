@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const serviceLinks = [
@@ -24,7 +25,7 @@ export default function SiteHeader() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
       <a className="brand" href="/" aria-label="RGR Graffix home">
-        <img src="/images/Apparell-Design-Print-1.png" alt="RGR Graffix" />
+        <Image src="/images/Apparell-Design-Print-1.png" alt="RGR Graffix" width={500} height={140} priority sizes="(max-width: 700px) 60vw, 340px" quality={80} />
       </a>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
         {menuOpen ? "✕" : "☰"}
