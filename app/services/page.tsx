@@ -20,7 +20,7 @@ export default function ServicesPage() {
             {servicePages.map((service, index) => (
               <Link className="service-index-card" href={`/${service.slug}`} key={service.slug}>
                 <img src={`/images/${service.images[0]}`} alt="" loading="lazy" />
-                <div><span className="service-number">{String(index + 1).padStart(2, "0")}</span><h2>{service.eyebrow}</h2><span className="service-arrow">↗</span></div>
+                <div><span className="service-number">{String(index + 1).padStart(2, "0")}</span><h2>{service.eyebrow}</h2></div>
               </Link>
             ))}
           </div>
