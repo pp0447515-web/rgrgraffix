@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SiteHeader from "../../components/SiteHeader";
-import SiteFooter from "../../components/SiteFooter";
-import { servicePages } from "../../lib/service-pages";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
+import { servicePages } from "../lib/service-pages";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
