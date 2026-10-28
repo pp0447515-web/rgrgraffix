@@ -4,7 +4,8 @@ import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "How It Works | RGR Graffix",
+  title: "How It Works",
+  alternates: { canonical: "/how-it-works" },
   description: "Learn how to request a quote, approve artwork and arrange production with RGR Graffix.",
 };
 
