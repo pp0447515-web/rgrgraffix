@@ -17,12 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_ZA",
     siteName: "RGR Graffix",
+    images: ["/images/Untitled-design-13.jpg"],
     title: "RGR Graffix | Signage, Printing & Vehicle Branding in Cape Town",
     description:
       "Signage, vehicle branding, large-format printing, safety signs and custom apparel from Mitchells Plain, Cape Town.",
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/Untitled-design-13.jpg"],
     title: "RGR Graffix | Signage, Printing & Vehicle Branding in Cape Town",
     description:
       "Signage, vehicle branding, large-format printing, safety signs and custom apparel from Mitchells Plain, Cape Town.",
