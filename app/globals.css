@@ -159,3 +159,55 @@ h1,h2,h3,h4,h5,h6{font-family:"Inter Tight",Arial,sans-serif;color:#fff;font-wei
   .service-detail-card h3{font-size:19px}
   .service-detail-card p{font-size:14px}
 }
+
+
+/* Final page-by-page Elementor alignment: desktop hero padding is 175px top/bottom;
+   inner content uses the recovered 1312px layout, with the original mobile spacing. */
+.inner-hero{min-height:0;align-items:center;padding:175px max(5vw,30px)}
+.inner-hero-content{max-width:1312px;margin:0 auto}
+.inner-hero h1{font-size:clamp(40px,4.2vw,64px);line-height:1.2;letter-spacing:-.02em}
+.inner-hero-intro{font-size:18px;line-height:1.5}
+.inner-section-heading h2,.simple-content h2,.contact-page-content h2{font-size:clamp(34px,4vw,52px);line-height:1.2;letter-spacing:-.02em}
+.service-detail-content{padding-top:112px;padding-bottom:112px}
+.service-detail-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.service-detail-card{background:transparent;border:0;border-top:1px solid #ffffff2b}
+.service-detail-image{aspect-ratio:4/3;background:#1b1b1b}
+.service-detail-card-copy{padding:22px 0 26px}
+.service-detail-card h3{font-size:clamp(18px,1.7vw,24px);text-transform:none;line-height:1.2}
+.service-detail-card p{font-size:16px;line-height:1.5}
+.service-next-step{background:transparent;border-top:1px solid #ffffff2b;border-bottom:1px solid #ffffff2b;padding:30px 0}
+.service-index-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.service-index-card{min-height:320px;border:1px solid #ffffff26}
+.service-index-card h2{font-size:24px}
+.simple-content{padding-top:112px;padding-bottom:112px;gap:80px}
+.simple-content>img{max-height:none;aspect-ratio:4/5;object-fit:cover}
+.gallery-content{padding-top:50px;padding-bottom:112px}
+.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.gallery-grid figure{aspect-ratio:4/3}
+.contact-page-content{grid-template-columns:.9fr 1.1fr;gap:80px;padding-top:112px;padding-bottom:112px}
+.contact-page-content .contact-form{background:#181818;border:1px solid #ffffff26;padding:30px}
+.contact-page-content .contact-form input,.contact-page-content .contact-form select,.contact-page-content .contact-form textarea{background:#111;border-color:#ffffff26;color:#fff}
+.contact-page-content .contact-form input::placeholder,.contact-page-content .contact-form textarea::placeholder{color:#888}
+.nav-cta span,.button span,.text-link span{display:none}
+.service-arrow{display:none!important}
+@media(max-width:1024px){
+ .inner-hero{padding:120px 40px}
+ .service-detail-grid,.service-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .simple-content,.contact-page-content{gap:40px}
+}
+@media(max-width:767px){
+ .inner-hero{padding:80px 20px;min-height:0}
+ .inner-hero h1{font-size:clamp(34px,9vw,48px)}
+ .inner-hero-intro{font-size:16px}
+ .service-detail-content{padding-top:64px;padding-bottom:64px}
+ .service-detail-grid,.service-index-grid,.gallery-grid{grid-template-columns:1fr;gap:25px}
+ .service-detail-card-copy{padding:20px 0 24px}
+ .service-detail-card h3{font-size:20px}
+ .service-detail-card p{font-size:15px}
+ .service-next-step{margin-top:45px;align-items:flex-start;flex-direction:column}
+ .services-index-content,.gallery-content{padding-top:45px;padding-bottom:65px}
+ .service-index-card{min-height:250px}
+ .simple-content,.contact-page-content{grid-template-columns:1fr;gap:32px;padding-top:64px;padding-bottom:64px}
+ .simple-content>img{aspect-ratio:4/3;max-height:360px}
+ .contact-page-content .contact-form{padding:22px}
+}
