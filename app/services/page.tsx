@@ -13,7 +13,7 @@ export default function ServicesPage() {
       <SiteHeader />
       <main id="main-content" className="inner-page">
         <section className="inner-hero services-index-hero">
-          <div className="inner-hero-image" style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28)),url("/images/Untitled-design-10.jpg")' }} />
+          <div className="inner-hero-image"><Image src="/images/Untitled-design-10.jpg" alt="" fill sizes="100vw" quality={78} priority /></div>
           <div className="inner-hero-content"><p className="eyebrow">WHAT WE DO</p><h1>Choose Your <em>Drive.</em></h1><p className="inner-hero-intro">Our Services</p></div>
         </section>
         <section className="section-wrap services-index-content">
