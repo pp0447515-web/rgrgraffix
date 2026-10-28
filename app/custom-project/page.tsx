@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
-export const metadata: Metadata = { title: "Custom Projects | RGR Graffix", description: "Explore custom vehicle branding, wraps and apparel projects by RGR Graffix." };
+export const metadata: Metadata = { title: "Custom Projects", alternates: { canonical: "/custom-project" }, description: "Explore custom vehicle branding, wraps and apparel projects by RGR Graffix." };
 
 const projectImages = [
   { image: "20240916_165024-scaled.jpg", title: "Rev tech polo" },
@@ -30,7 +31,7 @@ export default function CustomProjectPage() {
           <div className="gallery-grid custom-project-grid">
             {projectImages.map((project) => (
               <article className="custom-project-card" key={project.image}>
-                <figure><img src={`/images/${project.image}`} alt={project.title} loading="lazy" /></figure>
+                <figure><Image src={`/images/${project.image}`} alt={`${project.title} by RGR Graffix`} width={900} height={650} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" quality={78} loading="lazy" /></figure>
                 <div className="custom-project-caption">
                   <h2>{project.title}</h2>
                   <Link href="/contact" aria-label={`Enquire about ${project.title}`}>View Project</Link>
