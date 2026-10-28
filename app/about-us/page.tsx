@@ -16,10 +16,7 @@ export default function AboutPage() {
       <SiteHeader />
       <main id="main-content" className="inner-page">
         <section className="inner-hero">
-          <div
-            className="inner-hero-image"
-            style={{ backgroundImage: 'linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3)),url("/images/Untitled-design-13.jpg")' }}
-          />
+          <div className="inner-hero-image"><Image src="/images/Untitled-design-13.jpg" alt="" fill sizes="100vw" quality={78} priority /></div>
           <div className="inner-hero-content">
             <p className="eyebrow">About Us</p>
             <h1>Discover our story</h1>
