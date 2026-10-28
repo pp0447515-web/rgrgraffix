@@ -10,8 +10,6 @@ const projectImages = [
   { image: "20241109_193505-scaled.jpg", title: "Quite M3" },
   { image: "IMG-20240808-WA0019-1536x1152.jpg", title: "Nabeels GTI 8" },
   { image: "IMG-20211102-WA0052-1.jpg", title: "Marvin Uno wrap" },
-  { image: "IMG-20240814-WA0171-768x346.jpg", title: "Jealousy" },
-  { image: "IMG-20190908-WA0056-1-1024x768.jpg", title: "JD 35 Edition" },
   { image: "20240409_160012.jpg", title: "Ford Ranger" },
   { image: "20240830_154433-2048x1536.jpg", title: "Amarok PPF" },
 ];
