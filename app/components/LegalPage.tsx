@@ -12,7 +12,19 @@ export type LegalPageData = {
 };
 
 export function legalMetadata(title: string, description: string): Metadata {
-  return { title, description, robots: { index: true, follow: true } };
+  const canonicalPaths: Record<string, string> = {
+    "Terms & Conditions": "/terms-and-conditions",
+    "Terms of Use": "/terms-of-use",
+    "Privacy Policy": "/privacy-policy",
+    "Cookie Policy": "/cookie-policy",
+  };
+  return {
+    title,
+    description,
+    alternates: { canonical: canonicalPaths[title] ?? "/" },
+    openGraph: { title, description },
+    robots: { index: true, follow: true },
+  };
 }
 
 export default function LegalPage({ page }: { page: LegalPageData }) {
